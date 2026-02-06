@@ -3,5 +3,5 @@ spring:
     name: item-management
 
 server:
-  port: 8081
+  port: ${PORT:8081}
 
