@@ -72,5 +72,6 @@ server.port=${PORT:8081}
 
 ## API Testing Screenshots
 
-Screenshots of API testing using Postman are available in the `screenshots/` folder.
+Screenshots of API testing using Postman are available in the `Delta-Sigma-Ventures
+/Screenshots-Postman/` folder.
 
