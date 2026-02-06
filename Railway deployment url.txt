@@ -1,0 +1,100 @@
+Railway deployment url 
+delta-sigma-ventures-production.up.railway.app
+
+
+✅ WORKING STEPS: DEPLOY SPRING BOOT APP ON RAILWAY
+1️⃣ Login to Railway
+
+Go to https://railway.app
+
+Login using GitHub
+
+2️⃣ Create New Project
+
+Click New Project
+
+Select Deploy from GitHub repo
+
+Choose your repository
+
+3️⃣ Open the Service
+
+Click the rectangle box showing your service name (status: Online / Deploying)
+
+4️⃣ Set Root Directory
+
+Go to Settings
+
+Under Source
+
+Set Root Directory to:
+
+item-management
+
+
+Click Update
+
+5️⃣ Do NOT Add Any Variables
+
+Do NOT add:
+
+JAVA
+
+JAVA_VERSION
+
+SPRING_PROFILES_ACTIVE
+
+Leave Variables section empty
+
+6️⃣ Build Configuration
+
+Go to Settings → Build
+
+Builder: Railpack
+
+Build Command: leave empty
+
+Java version: auto-detected
+
+7️⃣ Start Command
+
+Go to Settings → Deploy
+
+Set Start Command to:
+
+java -jar target/*.jar
+
+
+Save changes
+
+8️⃣ Wait for Deployment
+
+Open Logs
+
+Wait until you see:
+
+Tomcat started on port ...
+Started Application
+
+
+Status becomes Online
+
+9️⃣ Generate Public URL
+
+Go to Settings → Networking
+
+Click Generate Domain
+
+Copy the generated .up.railway.app URL
+
+🔟 Deployment Verification
+
+Use the generated URL with your API endpoints:
+
+POST /api/items
+GET  /api/items/{id}
+
+
+Root URL (/) may show 404 — this is OK
+
+✅ DEPLOYMENT COMPLETE
