@@ -1,6 +1,6 @@
 # Simple Item Management API
 
-A simple Spring Boot RESTful API for managing items using in-memory storage.
+A simple Spring Boot RESTful API for managing items using in-memory storage (ArrayList).
 
 ---
 
@@ -24,39 +24,48 @@ A simple Spring Boot RESTful API for managing items using in-memory storage.
   "name": "iPhone 15",
   "description": "Apple smartphone"
 }
-Response
+```
 
-201 Created
+**Response**
+- `201 Created`
 
-2. Get Item by ID
+---
 
-GET /api/items/{id}
+### 2. Get Item by ID
+**GET** `/api/items/{id}`
 
-Response
+**Response**
+- `200 OK`
 
-200 OK
+---
 
-Input Validation
+## Input Validation
+- `name` must not be blank
+- Invalid input returns `400 Bad Request`
 
-Name must not be blank
+---
 
-Invalid input returns 400 Bad Request
+## How to Run Locally
 
-How to Run Locally
-Prerequisites
+### Prerequisites
+- Java 17
+- Maven
 
-Java 17
-
-Maven
-
-Run Application
+### Run Application
+```bash
 mvn spring-boot:run
-
+```
 
 Application runs at:
-
+```
 http://localhost:8081
+```
 
-Deployment
+---
 
-Deployed using Railway
+## Deployment
+- Deployed using **Railway**
+- Supports dynamic port configuration:
+```properties
+server.port=${PORT:8081}
+```
