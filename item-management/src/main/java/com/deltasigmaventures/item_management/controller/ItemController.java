@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController                    //This tells the spring that this  class handles HTTP requests ,all methods return JSON responses, not HTML pages
 @RequestMapping("/api/items")      //a base URL for all endpoints in this controller, every API inside this class will start with   /api/items
+@CrossOrigin(origins = "*")
 public class ItemController {      //Handles client requests and sends responses
 
     private final ItemService itemService;      // DI of ItemService class injected here
