@@ -7,15 +7,19 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class HomeController {
 
-    @GetMapping("/")
-    public ResponseEntity<String> home() {
-        return ResponseEntity.ok(
-                " Item Management Backend is LIVE!\n\n" +
-                        "Available APIs:\n" +
-                        "POST /api/items   -> Add item\n" +
-                        "GET  /api/items/{id} -> Get item by ID\n\n" +
-                        "Status: RUNNING"
-        );
+    @GetMapping(value = "/", produces = "text/html")
+    public String home() {
+        return """
+               <pre>
+Item Management Backend is LIVE!
+
+Available APIs:
+POST /api/items        -> Add item
+GET  /api/items/{id}   -> Get item by ID
+
+Status: RUNNING
+               </pre>
+               """;
     }
 
     @GetMapping("/health")
