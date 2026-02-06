@@ -69,3 +69,8 @@ http://localhost:8081
 ```properties
 server.port=${PORT:8081}
 ```
+
+## API Testing Screenshots
+
+Screenshots of API testing using Postman are available in the `screenshots/` folder.
+
